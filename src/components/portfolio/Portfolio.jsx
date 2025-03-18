@@ -23,14 +23,15 @@ const items = [
     {
         id: 3,
         title: "Android Event Discovery Application",
-        img: "/Event-Discovery.png",
+        img: "/Andriod-Event-Discovery.png",
         stack: "Java, Android Studio, Google Maps API, Picasso, Glide, Volley, Material Design, JSON",
         desc: "Built an Android application for event discovery with real-time location-based services using Google Maps API. Integrated social media sharing for seamless event promotion across platforms.",
+        youtube: "https://youtu.be/EFJGehD2KmE"
     },
     {
         id: 4,
         title: "Mobile Event Information Retrieval System",
-        img: "/Event-Retrieval.png",
+        img: "/Angular-Event-Retrieval.png",
         stack: "Angular 8, NodeJS, HTML, CSS, JavaScript, TypeScript, Bootstrap, AXIOS, REST API",
         desc: "Developed a mobile-first event discovery website with dynamic search and Google Maps integration. Enhanced user interactions with Autocomplete and cookie storage for personalized sessions. Hosted on AWS for scalability.",
     },
@@ -46,7 +47,7 @@ const items = [
         title: "Ticketmaster Event Booking System",
         img: "/Ticketmaster.png",
         stack: "Python, Flask, HTML, CSS, JavaScript, AJAX, JSON, REST API",
-        desc: "Developed a dynamic Angular web app with a Node.js backend to retrieve event and venue information using the Ticketmaster API. Hosted on AWS to support real-time, scalable event booking services.",
+        desc: "Developed a dynamic web app with a Node.js backend to retrieve event and venue information using the Ticketmaster API. Hosted on GCP to support real-time, scalable event booking services.",
     },
 ];
 
