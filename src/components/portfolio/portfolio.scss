@@ -122,23 +122,48 @@
                     }
                 }
 
-                button {
-                    background-color: orange;
-                    border-radius: 15px;
-                    width: 150px;
-                    height: 30px;
-                    border: 2px solid orange;
-                    color: #0c0c1d;
-                    cursor: pointer;
-                    margin: 10px;
+                .buttonContainer {
+                    display: flex;
+                    justify-content: center; // Centers buttons horizontally
+                    align-items: center; // Centers buttons vertically within the container
+                    gap: 20px; // Space between buttons
+                    margin-top: 10px; // Optional margin above the buttons
 
-                    &:hover {
-                        background-color: transparent;
-                        color: orange;
+                    a {
+                        text-decoration: none; // Remove underline from links
                     }
 
+                    button {
+                        display: flex; // Make button a flex container
+                        justify-content: center; // Center text horizontally
+                        align-items: center; // Center text vertically
+                        background-color: orange;
+                        border-radius: 15px; // Adjust border radius (15px preferred)
+                        width: 150px;
+                        height: 30px;
+                        border: 2px solid orange;
+                        color: #0c0c1d;
+                        cursor: pointer;
+                        font-size: 16px;
 
+                        &:hover {
+                            background-color: transparent;
+                            color: orange;
+                        }
+                    }
+
+                    .youtubeButton {
+                        background-color: red;
+                        border: 2px solid red;
+                        color: #fff;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: red;
+                        }
+                    }
                 }
+
             }
         }
     }
