@@ -42,13 +42,13 @@ const items = [
         stack: "Python, SQL, NoSQL",
         desc: "Developed a custom SQL and NoSQL database system in Python, featuring command parsing and execution. Optimized query processing, reducing execution time by 25%, and enhanced search efficiency by 20% through improved data handling and error management.",
     },
-    {
-        id: 6,
-        title: "Ticketmaster Event Booking System",
-        img: "/Ticketmaster.png",
-        stack: "Python, Flask, HTML, CSS, JavaScript, AJAX, JSON, REST API",
-        desc: "Developed a dynamic web app with a Node.js backend to retrieve event and venue information using the Ticketmaster API. Hosted on GCP to support real-time, scalable event booking services.",
-    },
+    // {
+    //     "id": 6,
+    //     "title": "Ticketmaster Event Booking System",
+    //     "img": "/Ticketmaster.png",
+    //     "stack": "Python, Flask, JavaScript, RESTful APIs, GCP",
+    //     "desc": "Designed and deployed a scalable web application to retrieve real-time event and venue data using the Ticketmaster API. Integrated external APIs for seamless data retrieval and deployed the system on GCP for high availability and scalability."
+    // },
 ];
 
 // const Single = ({ item }) => {

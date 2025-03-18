@@ -1,15 +1,15 @@
 import React from 'react'
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 
-const variants={
-    open:{
-        transition:{
+const variants = {
+    open: {
+        transition: {
             staggerChildren: 0.1,
         },
     },
-    closed:{
-        transition:{
+    closed: {
+        transition: {
             staggerChildren: 0.05,
             staggerDirection: -1,
         },
@@ -32,18 +32,18 @@ const itemVariants = {
 
 
 export default function Links() {
-    const items=[
+    const items = [
         "Homepage",
         "Projects",
         "Experience",
         "Contact",
         "About",
     ];
-  return (
-    <motion.div className='links' variants={variants}>
-        {items.map(item=>(
-            <motion.a href={item==='About'? "https://www.linkedin.com/in/shubhankar-hingne":`#${item}`} key={item} variants={itemVariants} whileHover={{scale:1.1}} whileTap={{scale:0.9}}>{item}</motion.a>
-        ))}
-    </motion.div>
-  );
+    return (
+        <motion.div className='links' variants={variants}>
+            {items.map(item => (
+                <motion.a href={item === 'About' ? "https://www.linkedin.com/in/karan---shah/" : `#${item}`} key={item} variants={itemVariants} whileHover={{ scale: 1.1 }} target='_blank' whileTap={{ scale: 0.9 }}>{item}</motion.a>
+            ))}
+        </motion.div>
+    );
 };

@@ -1,105 +1,103 @@
-@import "../../app.scss";
-.contactform{
-    height: 100%;
-    max-width: 1366px;
+/* contact.scss */
+.contactform {
+    height: auto;
+    min-height: 100vh;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
 
-    @include mobile{
-        height: 70%;
+.textContainer {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+span {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.formContainer {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+input,
+textarea {
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    background-color: orange;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #0c0c1d;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    color: orange;
+    border: 1px solid orange;
+}
+
+@media screen and (max-width: 768px) {
+    .contactform {
         flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 
-    .textContainer{
-        flex:1;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        @include mobile{
-            gap: 20px;
-            text-align: center;
-            align-items: center;
-            margin-top: 5%;
-
-        }
-    }
-    h1{
-        font-size: 100px;
-        line-height:88px;
-
-        @include mobile{
-            font-size: 36px;
-        }
-    }
-    span{
-        font-weight: 300;
+    h1 {
+        font-size: 2rem;
     }
 
-    .formContainer{
-        flex:1;
-        position: relative;
-        top:0;
-
-        @include mobile{
-            width: 60%;
-            padding-top: 5px;
-        }
-
-        .phonesvg{
-            stroke: orange;
-            position: absolute;
-            margin: auto;
-            z-index: -1;
-            
-            @include mobile{
-                padding-top: 50px;
-                top: 50%; /* Center vertically */
-                left: 50%; /* Center horizontally */
-                transform: translate(-50%, -50%); /* Center alignment */
-            }
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            z-index: 1;
-
-            input, textArea{
-                padding: 20px;
-                background-color: transparent;
-                border: 1px solid white;
-                color:white;
-                border-radius: 5px;
-
-                @include mobile{
-                    padding: 10px;
-                }
-            }
-
-            button{
-                padding: 20px;
-                border: none;
-                background-color:orange;
-                border: 2px solid orange;
-                cursor: pointer;
-                font-weight: 500;
-                color:#0c0c1d;
-
-                @include mobile{
-                    font-size: 16px;
-                    padding: 10px;
-                }
-
-                &:hover{
-                    background-color: transparent;
-                    color: orange;
-                }
-            }
-        }
+    form {
+        max-width: 100%;
     }
 
+    input,
+    textarea,
+    button {
+        font-size: 0.9rem;
+    }
+}
 
-    
+@media screen and (min-width: 1500px) {
+    .contactform {
+        min-height: 100vh;
+    }
+
+    .formContainer {
+        min-height: auto;
+    }
 }

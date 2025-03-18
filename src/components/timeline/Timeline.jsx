@@ -2,34 +2,55 @@ import React, { useEffect, useRef, useState } from 'react';
 import './timeline.scss';
 
 const events = [
-  { 
-    startDate: new Date(2022, 7, 1), 
-    endDate: new Date(2024, 7, 31), 
-    description: "University of Southern California",
-    details: "Master's in Computer Science",
+  {
+    startDate: new Date(2024, 6, 1),
+    endDate: null, // Ongoing
+    description: "USC Information Technology Services",
+    details: "Software Engineer (A/V)",
     color: "#FF6B6B"
   },
-  { 
-    startDate: new Date(2019, 7, 1), 
-    endDate: new Date(2022, 5, 30), 
-    description: "K. K. Wagh Institute of Engineering Education and Research",
-    details: "Bachelor's in Computer Engineering",
+  {
+    startDate: new Date(2023, 0, 1),
+    endDate: new Date(2023, 11, 31),
+    description: "USC Viterbi School of Engineering",
+    details: "Graduate Teaching Assistant (CSCI 544: Applied NLP)",
+    color: "#FF9F1C"
+  },
+  // {
+  //   startDate: new Date(2022, 9, 1),
+  //   endDate: new Date(2024, 4, 31),
+  //   description: "USC Information Technology Services",
+  //   details: "LE Engineering Assistant",
+  //   color: "#FF6B6B"
+  // },
+  {
+    startDate: new Date(2022, 7, 1),
+    endDate: new Date(2024, 4, 31),
+    description: "University of Southern California",
+    details: "Master of Science in Computer Science (GPA: 3.5/4.0)",
     color: "#4ECDC4"
   },
-  { 
-    startDate: new Date(2018, 5, 1), 
-    endDate: new Date(2019, 4, 30), 
-    description: "Sai Info Solutions",
+  {
+    startDate: new Date(2022, 0, 1),
+    endDate: new Date(2022, 4, 31),
+    description: "Sensussoft Software Pvt Ltd",
     details: "Software Development Engineer Intern",
     color: "#45B7D1"
   },
-  { 
-    startDate: new Date(2016, 8, 1), 
-    endDate: new Date(2019, 5, 30), 
-    description: "K. K. Wagh Polytechnic",
-    details: "Diploma in Computer Technology",
+  {
+    startDate: new Date(2020, 6, 1),
+    endDate: new Date(2020, 9, 31),
+    description: "Singular Informatics Pvt Ltd",
+    details: "Software Development Engineer Intern",
     color: "#FF9F1C"
   },
+  {
+    startDate: new Date(2018, 7, 1),
+    endDate: new Date(2022, 4, 31),
+    description: "SRM Institute of Science and Technology",
+    details: "B. Tech in Computer Science and Engineering (GPA: 3.7/4.0)",
+    color: "#4ECDC4"
+  }
 ];
 
 const Timeline = () => {
@@ -39,11 +60,7 @@ const Timeline = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
@@ -61,11 +78,11 @@ const Timeline = () => {
 
   const formatDateRange = (start, end) => {
     const formatDate = (date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-    return `${formatDate(start)} - ${formatDate(end)}`;
+    return end ? `${formatDate(start)} - ${formatDate(end)}` : `${formatDate(start)} - Present`;
   };
 
   return (
-    <div className={`timeline ${isVisible ? 'visible' : ''}`} ref={timelineRef}>
+    <div className={`timeline ${isVisible ? 'visible' : ''}`} ref={timelineRef} style={{ position: 'relative' }}>
       <div className="timeline-line"></div>
       {events.map((event, index) => (
         <div key={index} className={`event ${index % 2 === 0 ? 'left' : 'right'}`}>
