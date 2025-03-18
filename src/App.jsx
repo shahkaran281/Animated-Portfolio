@@ -22,9 +22,7 @@ const App = () => {
     <section id="Timeline">
       <Timeline />
     </section>
-    {/* <h1>🚀 This is the LATEST version! 🚀</h1> */}
     <section id="Contact"><Contact /></section>
-    {/* <h1>New Change - Testing Refresh</h1> */}
 
   </div>
 };
