@@ -15,9 +15,10 @@ const items = [
     {
         id: 2,
         title: "Dietary Assessment Using Deep Learning",
-        img: "/Dietary-Assessment.png",
+        img: "/Dietary-Assessment-result.png",
         stack: "Python, TensorFlow, MobileNetV2, OpenCV",
         desc: "Developed an image-based calorie estimation model using Transfer Learning (MobileNetV2) with 92% accuracy. Enabled users to classify and retrieve nutritional values from mobile photos, improving dietary tracking efficiency.",
+        link: "https://github.com/shahkaran281/Dietary-Assessment-Deep-Learning"
     },
     {
         id: 3,
@@ -38,7 +39,7 @@ const items = [
         title: "Unified Data Management System",
         img: "/Unified-Data.png",
         stack: "Python, SQL, NoSQL",
-        desc: "Engineered custom SQL and NoSQL databases in Python, including command parsing and execution, reducing query execution time by 25%. Enhanced search efficiency by 20% through optimized data handling and error management.",
+        desc: "Developed a custom SQL and NoSQL database system in Python, featuring command parsing and execution. Optimized query processing, reducing execution time by 25%, and enhanced search efficiency by 20% through improved data handling and error management.",
     },
     {
         id: 6,
@@ -86,10 +87,6 @@ const Single = ({ item }) => {
     const { scrollYProgress } = useScroll({ target: ref });
     const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
-    const handleClick = () => {
-        window.location.href = item.link;
-    };
-
     return (
         <section>
             <div className="container">
@@ -103,7 +100,14 @@ const Single = ({ item }) => {
 
                         {/* Buttons container for "See More" and "Watch Demo" */}
                         <div className="buttonContainer">
-                            {item.id !== 3 && <button onClick={handleClick}>See More</button>}
+                            {/* Show "See More" only if NOT ID 3, 4, or 6 */}
+                            {!(item.id === 3 || item.id === 4 || item.id === 6) && (
+                                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                    <button>See More</button>
+                                </a>
+                            )}
+
+                            {/* Show "Watch Demo" button only if YouTube link exists */}
                             {item.youtube && (
                                 <a href={item.youtube} target="_blank" rel="noopener noreferrer">
                                     <button className="youtubeButton">Watch Demo</button>
@@ -111,7 +115,10 @@ const Single = ({ item }) => {
                             )}
                         </div>
 
-                        {item.id === 3 && <span>NOT permitted to distribute or publicly display any part of this project</span>}
+                        {/* Show restriction message for IDs 3, 4, and 6 */}
+                        {(item.id === 3 || item.id === 4 || item.id === 6) && (
+                            <span className="restrictedMessage">NOT permitted to distribute or publicly display any code of this project</span>
+                        )}
                     </motion.div>
                 </div>
             </div>
