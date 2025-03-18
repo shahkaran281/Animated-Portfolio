@@ -7,13 +7,10 @@
         position: sticky;
         top: 0;
         left: 0;
-        z-index: 10; // so it’s above other elements
-        background-color: #0c0c1d; // or whatever your page background is
         padding-top: 50px;
-
         text-align: center;
-        font-size: 36px;
         color: orange;
+        font-size: 36px;
 
         @include mobile {
             padding-top: calc(100vh - 100px);
@@ -27,13 +24,13 @@
     }
 
     .container {
+
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        padding-top: 50px; // ensures there's space after the heading
 
         .wrapper {
             max-width: 1366px;
@@ -51,6 +48,7 @@
             .imageContainer {
                 flex: 1;
                 height: 50%;
+                z-index: -1;
                 padding-top: 70px;
 
                 @include mobile {
@@ -76,6 +74,7 @@
                 gap: 30px;
                 align-items: start;
 
+
                 span {
                     color: orange;
 
@@ -91,6 +90,7 @@
                     align-items: center;
                     padding-top: 10px;
                     padding-bottom: 150px;
+
                 }
 
                 .title {
@@ -106,6 +106,7 @@
                         align-items: center;
                         text-align: center;
                     }
+
                 }
 
                 p {
@@ -121,44 +122,22 @@
                     }
                 }
 
-                /* --- BUTTON STYLING FIX --- */
-                .buttonContainer {
-                    display: flex;
-                    gap: 15px;
-                    /* Adds spacing between buttons */
-                    margin-top: 20px;
-                    /* Adds space above the buttons */
-                }
-
                 button {
                     background-color: orange;
-                    border-radius: 10px;
+                    border-radius: 15px;
                     width: 150px;
-                    height: 40px;
+                    height: 30px;
                     border: 2px solid orange;
                     color: #0c0c1d;
-                    font-size: 16px;
-                    font-weight: bold;
                     cursor: pointer;
-                    transition: 0.3s ease-in-out;
+                    margin: 10px;
 
                     &:hover {
                         background-color: transparent;
                         color: orange;
                     }
-                }
 
-                /* --- YouTube Button Styling --- */
-                .youtubeButton {
-                    background-color: #ff0000;
-                    /* YouTube red */
-                    border: 2px solid #ff0000;
-                    color: white;
 
-                    &:hover {
-                        background-color: transparent;
-                        color: #ff0000;
-                    }
                 }
             }
         }
