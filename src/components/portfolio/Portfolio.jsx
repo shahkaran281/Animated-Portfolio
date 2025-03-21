@@ -68,6 +68,8 @@ const Single = ({ item }) => {
                     </div>
                     <motion.div className="textContainer" style={{ y }}>
                         <h2 className='title'>{item.title}</h2>
+                        <p className="stack"><strong>Stack:</strong> {item.stack}</p>
+
                         <p>{item.desc}</p>
 
                         {/* Buttons container for "See More" and "Watch Demo" */}
