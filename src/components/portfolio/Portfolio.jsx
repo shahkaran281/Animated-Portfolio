@@ -4,6 +4,23 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
     {
+        id: 5,
+        title: "Unified Data Management System",
+        img: "/Unified-Data.png",
+        stack: "Python, SQL, NoSQL",
+        link: "https://github.com/shahkaran281/Unified-Data-Management-System",
+        desc: "Developed a custom SQL and NoSQL database system in Python, featuring command parsing and execution. Optimized query processing, reducing execution time by 25%, and enhanced search efficiency by 20% through improved data handling and error management.",
+    },
+    {
+        id: 7,
+        title: "SmartScene Navigator",
+        img: "SmartScene-Navigator.png",
+        stack: "Python, OpenCV, SceneDetect, Pygame",
+        link: "https://github.com/shahkaran281/SmartScene-Navigator",
+        desc: "SmartScene Navigator is an interactive video player that automatically detects and organizes scenes, shots, and subshots in a video. It extracts a hierarchical table of contents and allows users to jump between different segments seamlessly. The player provides synchronized video and audio playback, making navigation intuitive and efficient.",
+        youtube: 'https://youtu.be/7ZWW_gZ76U8',
+    },
+    {
         id: 1,
         title: "Mortgage-Backed Securities Prepayment Prediction System",
         img: "/MBS-Page.png",
@@ -35,54 +52,8 @@ const items = [
         stack: "Angular 8, NodeJS, HTML, CSS, JavaScript, TypeScript, Bootstrap, AXIOS, REST API",
         desc: "Developed a mobile-first event discovery website with dynamic search and Google Maps integration. Enhanced user interactions with Autocomplete and cookie storage for personalized sessions. Hosted on AWS for scalability.",
     },
-    {
-        id: 5,
-        title: "Unified Data Management System",
-        img: "/Unified-Data.png",
-        stack: "Python, SQL, NoSQL",
-        desc: "Developed a custom SQL and NoSQL database system in Python, featuring command parsing and execution. Optimized query processing, reducing execution time by 25%, and enhanced search efficiency by 20% through improved data handling and error management.",
-    },
-    // {
-    //     id: 6,
-    //     title: "Ticketmaster Event Booking System",
-    //     img: "/Ticketmaster.png",
-    //     stack: "Python, Flask, HTML, CSS, JavaScript, AJAX, JSON, REST API",
-    //     desc: "Developed a dynamic web app with a Node.js backend to retrieve event and venue information using the Ticketmaster API. Hosted on GCP to support real-time, scalable event booking services.",
-    // },
+
 ];
-
-// const Single = ({ item }) => {
-
-//     const ref = useRef();
-
-//     const { scrollYProgress } = useScroll({ target: ref });
-
-//     const y = useTransform(scrollYProgress, [0, 1], [-300, 300])
-
-//     const handleClick = () => {
-//         window.location.href = item.link;
-//     }
-
-//     return (
-//         <section>
-//             <div className="container">
-//                 <div className="wrapper">
-//                     <div className="imageContainer" ref={ref}>
-//                         <img src={item.img} alt="" />
-//                     </div>
-//                     <motion.div className="textContainer" style={{ y }}>
-//                         <h2 className='title'>{item.title}</h2>
-
-//                         <p>{item.desc}</p>
-//                         {item.id !== 3 && <button onClick={handleClick}>See More</button>}
-//                         {item.id === 3 && <span>NOT permitted to distribute or publically display any part of this project</span>}
-
-//                     </motion.div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
 const Single = ({ item }) => {
     const ref = useRef();
     const { scrollYProgress } = useScroll({ target: ref });
