@@ -14,7 +14,7 @@ export default function Navbar() {
           <a href="https://github.com/shahkaran281" target='_blank'><img src="/github.png" alt="" /></a>
           <a
             className="from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-            href="https://drive.google.com/file/d/1G2h6qmQhscg2400SM1uvB1EMFzB_E4Wr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1QxFP8COLMgTzPcxVQmjGg73QJaGam6hh/view?usp=sharing"
             target="_blank"
           >
             <img src='/resume-icon.png' />
